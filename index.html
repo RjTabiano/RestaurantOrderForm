@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Home</title>
+	<link rel="icon" href="https://images.vexels.com/media/users/3/240168/isolated/lists/d17a578c03915b108a4c162b62c13fd3-boba-tea-illustration.png" type="image/icon type">
+	
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+	
+	    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"        crossorigin="anonymous"></script>
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/style.css">	
+	
+<!-- FONTS -->
+
+<!-- Icons -->	
+
+<!-- JavaScript -->	
+	<script src="javascript/scripts.js"></script>
+
+</head>
+
+<body>
+
+<div class="container mx-auto">
+	<h1 class="display-1"> MEERYENDA</h1>
+	
+	<div class="row">
+		<div class="col-md">
+			<div class="card">
+			<div class = "card-img">
+			  <img class="card-img-top" src="images/TOK.jpg" alt="Card image cap">
+			   </div><div class="card-body">
+				<p class="card-text">Twokneneng ₱3.00</p>
+			  </div>
+			</div>
+		</div>
+		<div class="col-md">
+			<div class="card">
+			<div class = "card-img">
+			  <img class="card-img-top" src="images/turoon.jpg" alt="Card image cap">
+			  </div><div class="card-body">
+				<p class="card-text">Tworon ₱15.00</p>
+			  </div>
+			</div>
+		</div>
+		<div class="col-md">
+			<div class="card">
+			<div class = "card-img">
+			  <img class="card-img-top" src="images/cala.jpg" alt="Card image cap">
+			  </div><div class="card-body">
+				<p class="card-text">Kilomares ₱4.00</p>
+			  </div>
+			</div>
+		</div>
+		<div class="col-md">
+			<div class="card">
+			<div class = "card-img">
+			  <img class="card-img-top" src="images/bnq.jpg" alt="Card image cap">
+			  </div><div class="card-body">
+				<p class="card-text">Behneneque ₱20.00</p>
+			  </div>
+			</div>
+		</div>		
+	</div>
+</div>
+
+<div class="order my-5 ">
+<div class="card mx-auto">
+  <div class="card-header">
+    <h3 class="text-center">Order Form</h3>
+  </div>
+  <div class="card-body m-2">
+      <div class="col-sm-4 totalnum text-center ">
+			<input type="number" class="form-control " id="total" name="text" readonly>
+	  </div>
+    <h5 class="card-title text-center">Choose your Merienda:</h5>      
+    <form >
+	  <div class="form-group row justify-content-center my-3">
+		<label for="Qty1" class="col-sm-2 col-form-label text-center">Talkneneng </label>
+		<div class="col-sm-4">
+		  <input type="number" class="form-control text-center" onblur="findTotal()"  name="qty" id="tokneneng" placeholder="Quantity">
+		</div>
+	  </div>
+	  <div class="form-group row justify-content-center my-3">
+		<label for="Qty2" class="col-sm-2 col-form-label text-center">Tworon</label>
+		<div class="col-sm-4">
+		  <input type="number" class="form-control text-center" onblur="findTotal()"  name="qty" id="turon" placeholder="Quantity">
+		</div>
+	  </div>
+	  <div class="form-group row justify-content-center my-3">
+		<label for="Qty3" class="col-sm-2 col-form-label text-center">Kilomares</label>
+		<div class="col-sm-4">
+		  <input type="number" class="form-control text-center" onblur="findTotal()"  name="qty" id="calamares" placeholder="Quantity">
+		</div>
+	  </div>
+	  <div class="form-group row justify-content-center my-3">
+		<label for="inputQty1" class="col-sm-2 col-form-label text-center">Behneneque</label>
+		<div class="col-sm-4">
+		  <input type="number" class="form-control text-center" onblur="findTotal()"  name="qty" id="banana" placeholder="Quantity">
+		</div>
+	  </div>
+	  <div class="form-group row justify-content-center my-3">
+		<label for="totalbill" class="col-sm-2 col-form-label text-center">Total Bill: (₱)</label>
+		<div class="col-sm-4">
+		  <input type="number" class="form-control text-center" id="totalbill" readonly>
+		</div>
+	  </div>
+	  <div class="form-group row justify-content-center my-3">
+		<label for="payment" class="col-sm-2 col-form-label text-center">Cash: (₱)</label>
+		<div class="col-sm-4">
+		  <input type="number" class="form-control text-center"  onblur="Change()" name="text" id="payment">
+		</div>
+	  </div>	  
+	</form>
+  </div>
+</div>
+</div>
+
+<div class="info my-5 ">
+<div class="card mx-auto">
+  <div class="card-header">
+    <h3 class="text-center">Customer Information</h3>
+  </div>
+  <div class="card-body m-2">
+    <form >
+	  <div class="form-group row justify-content-center my-3">
+		<label for="name" class="col-sm-2 col-form-label text-center">Full Name</label>
+		<div class="col-sm-4">
+		  <input type="text" class="form-control text-center" name="text" id="name" placeholder="">
+		</div>
+	  </div>
+	  <div class="form-group row justify-content-center my-3">
+		<label for="address" class="col-sm-2 col-form-label text-center">Address</label>
+		<div class="col-sm-4">
+		  <input type="text" class="form-control text-center" name="text" id="address" placeholder="">
+		</div>
+	  </div>
+	  <div class="form-group row justify-content-center my-3">
+		<label for="contact" class="col-sm-2 col-form-label text-center">Contact Number</label>
+		<div class="col-sm-4">
+		  <input type="number" class="form-control text-center" name="text" id="contact" placeholder="">
+		</div>
+	  </div>
+	  <div class="text-center">
+	  <a class="btn btn-success my-2" data-bs-toggle="modal" data-bs-target="#exampleModal"  id="submit">Submit</a><br>
+	  <a class="btn btn-secondary  my-2" onclick="Reset()"> Reset</a>
+	  </div>
+	</form>
+  </div>
+</div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Sales Invoice</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+           <h6 id="modal_body"></h6>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+var tokneneng = 3, turon = 15, calamares = 4, banana = 20;
+var tokneneng_q=0, turon_q=0, calamares_q=0, banana_q=0;
+var tokneneng_t=0, turon_t=0, calamares_t=0, banana_t=0;
+var total_amount=0;
+var change = 0;
+var payment = 0;
+
+document.getElementById("tokneneng").addEventListener("change",function(){
+    tokneneng_q=this.value;
+	var cornd = parseInt(tokneneng_q);
+	tokneneng_t=cornd*tokneneng;
+    Total();
+
+});
+
+document.getElementById("turon").addEventListener("change",function(){
+    turon_q=this.value;
+	var cal = parseInt(turon_q);
+	turon_t=cal*turon;
+    Total();
+
+});
+
+document.getElementById("calamares").addEventListener("change",function(){
+
+    calamares_q=this.value;
+	var fri = parseInt(calamares_q);
+	calamares_t=fri*calamares;
+    Total();
+});
+
+document.getElementById("banana").addEventListener("change",function(){
+
+	banana_q=this.value;
+	var t = parseInt(banana_q);
+	banana_t=t*banana;
+    Total();
+
+});
+
+
+
+$("#submit").click(function () {
+
+
+    var name = $("#name").val();
+    var address = $("#address").val();
+    var contact = $("#contact").val();
+    var bill = $("#totalbill").val();
+    var payment = $("#payment").val();
+	var change = payment - bill;
+	if (change < 0) {change = "Money is insufficient."}
+
+   var str = 
+   "Name: " + name + " <br /> " + 
+   "Address: " + address + " <br /> " +
+   "Contact Number: " + contact + " <br /> " +
+   "Total Bill: " + bill+ " <br /> " +
+   "Payment: " + payment + " <br /> " +
+   "Change: " + change;
+   $("#modal_body").html(str);
+});
+</script>
+
+</body>
+</html>
